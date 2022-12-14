@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tipo: MyString
+  estadoPista: MyString
+  estadoTrafico: MyString
+  region: MyString
+  provincia: MyString
+  distrito: MyString
+  ciudad: MyString
+
+two:
+  tipo: MyString
+  estadoPista: MyString
+  estadoTrafico: MyString
+  region: MyString
+  provincia: MyString
+  distrito: MyString
+  ciudad: MyString

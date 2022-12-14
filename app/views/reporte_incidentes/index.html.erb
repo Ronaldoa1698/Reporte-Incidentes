@@ -1,0 +1,21 @@
+<% if user_signed_in? %> 
+<div> BIENVENIDO! <%= current_user.email %> </div> 
+<%= button_to "CERRAR SESION", destroy_user_session_path, method: :delete %> 
+<% else %>
+<%= button_to "", new_user_session_path %> 
+<% end %>
+
+<p style="color: green"><%= notice %></p>
+
+<h1>Reporte incidentes</h1>
+
+<div id="reporte_incidentes">
+  <% @reporte_incidentes.each do |reporte_incidente| %>
+    <%= render reporte_incidente %>
+    <p>
+      <%= link_to "Show this reporte incidente", reporte_incidente %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New reporte incidente", new_reporte_incidente_path %>

@@ -1,0 +1,52 @@
+<%= form_with(model: reporte_incidente) do |form| %>
+  <% if reporte_incidente.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(reporte_incidente.errors.count, "error") %> prohibited this reporte_incidente from being saved:</h2>
+
+      <ul>
+        <% reporte_incidente.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :tipo, style: "display: block" %>
+    <%= form.text_field :tipo %>
+  </div>
+
+  <div>
+    <%= form.label :estadoPista, style: "display: block" %>
+    <%= form.text_field :estadoPista %>
+  </div>
+
+  <div>
+    <%= form.label :estadoTrafico, style: "display: block" %>
+    <%= form.text_field :estadoTrafico %>
+  </div>
+
+  <div>
+    <%= form.label :region, style: "display: block" %>
+    <%= form.text_field :region %>
+  </div>
+
+  <div>
+    <%= form.label :provincia, style: "display: block" %>
+    <%= form.text_field :provincia %>
+  </div>
+
+  <div>
+    <%= form.label :distrito, style: "display: block" %>
+    <%= form.text_field :distrito %>
+  </div>
+
+  <div>
+    <%= form.label :ciudad, style: "display: block" %>
+    <%= form.text_field :ciudad %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
